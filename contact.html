@@ -1,8 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="contact.css" />
 </head>
+<body>
+<nav style="background-color: darkslateblue;">
+<ul style="list-style-type: none; 
+display: flex; 
+gap: 20px;
+padding: 15px;
+align-items: center;">
+    <li>
+        <img src="ASSETS/img/brandv2.png" style="height: 30px;" alt="">
+    </li>
+    <li style="color: aliceblue;">
+        <a style="color: aliceblue;" href="index.html"> Home</a>
+    </li>
+    <li style="color: aliceblue;">
+        <a style="color: aliceblue;" href="blog.html"> blog</a>
+    </li>
+    <li style="display: flex; justify-content: flex-end; width: 80%;">
+        <button style="color: aliceblue;" class="btn-submit">Contact Me</button>
+    </li>
+</ul>
+</nav>
 
-
+    <div style="display: flex; justify-content: center; margin-top: 100px;">
+    <form onsubmit="sendToMail(event)"
+    style="display: flex; flex-direction: column; gap: 10px; width: 300px;">
+    <div>
+    <label>Name</label>
+    <input id="input-name" required/>
+    </div>
+    <div>
+    <label>Email</label>
+    <input id="input-email" required />
+    </div>
+    <div>
+    <label>Phone Number</label>
+    <input id="input-phone" required/>
+    </div>
+    <div>
+    <label>Subject</label>
+    <select id="input-subject" required>
+        <option value="Fullstack Developer">Fullstack Developer</option>
+        <option value="Frontend Developer">Frontend Developer</option>
+        <option value="Backend Developer">Backend Developer</option>
+    </select>
+    </div>
+    <div>
+    <label>Your Message</label>
+    <textarea id="input-message"></textarea>
+    </div>
+    <button class="btn-submit">Submit</button>
+    </form>
+    </div>
+    <script src="ASSETS/js/contact.js"></script>
+</body>
 </html>
